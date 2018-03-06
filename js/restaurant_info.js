@@ -1,6 +1,13 @@
 let restaurant;
-var map;
-
+let map;
+/**
+ * Register Service Worker.
+ */
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => console.log('Service worker registered!') );
+}
 /**
  * Initialize Google map, called from HTML.
  */
@@ -19,7 +26,9 @@ window.initMap = () => {
         }
     });
 
-}
+};
+
+
 
 /**
  * Get current restaurant from page URL.

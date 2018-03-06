@@ -59,6 +59,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     text-align: center;
     text-transform: uppercase;
 }
+#footer p{
+    color: #fff;
+    font-size: .8rem;
+}
 
 /* ====================== Navigation ====================== */
 nav {

@@ -5,6 +5,14 @@ var map;
 var markers = [];
 
 /**
+ * Register Service Worker.
+ */
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => console.log('Service worker registered!') );
+}
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -24,7 +32,7 @@ fetchNeighborhoods = () => {
             fillNeighborhoodsHTML();
         }
     });
-}
+};
 
 /**
  * Set neighborhoods HTML.
@@ -51,7 +59,7 @@ fetchCuisines = () => {
             fillCuisinesHTML();
         }
     });
-}
+};
 
 /**
  * Set cuisines HTML.
@@ -81,7 +89,7 @@ window.initMap = () => {
         scrollwheel: false
     });
     updateRestaurants();
-}
+};
 
 
 /**
