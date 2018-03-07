@@ -45,7 +45,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
         option.value = neighborhood;
         select.append(option);
     });
-}
+};
 
 /**
  * Fetch all cuisines and set their HTML.
@@ -73,7 +73,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
         option.value = cuisine;
         select.append(option);
     });
-}
+};
 
 /**
  * Initialize Google map, called from HTML.
@@ -113,7 +113,7 @@ updateRestaurants = () => {
             fillRestaurantsHTML();
         }
     })
-}
+};
 
 /**
  * Clear current restaurants, their HTML and remove their map markers.
@@ -128,7 +128,7 @@ resetRestaurants = (restaurants) => {
     self.markers.forEach(m => m.setMap(null));
     self.markers = [];
     self.restaurants = restaurants;
-}
+};
 
 /**
  * Create all restaurants HTML and add them to the webpage.
@@ -139,7 +139,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
         ul.append(createRestaurantHTML(restaurant));
     });
     addMarkersToMap();
-}
+};
 
 /**
  * Create restaurant HTML.
@@ -150,6 +150,8 @@ createRestaurantHTML = (restaurant) => {
     const image = document.createElement('img');
     image.className = 'restaurant-img';
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    image.srcset = DBHelper.imageSrcset(restaurant);
+    image.sizes = DBHelper.homeImageSizes();
     image.alt = `Image of the ${restaurant.name} restaurant`;
     li.append(image);
 
@@ -161,7 +163,7 @@ createRestaurantHTML = (restaurant) => {
     neighborhood.innerHTML = restaurant.neighborhood;
     li.append(neighborhood);
 
-    const address = document.createElement('p');
+    const address = document.createElement('address');
     address.innerHTML = restaurant.address;
     li.append(address);
 
@@ -171,7 +173,7 @@ createRestaurantHTML = (restaurant) => {
     li.append(more)
 
     return li
-}
+};
 
 /**
  * Add markers for current restaurants to the map.
@@ -186,6 +188,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
         self.markers.push(marker);
     });
 
-}
+};
 
 
