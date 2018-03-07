@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5698534-a161-441a-9bf4-c89a60bb709e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/js/restaurant_info.js" afterPath="$PROJECT_DIR$/js/restaurant_info.js" />
-      <change beforePath="$PROJECT_DIR$/restaurant.html" afterPath="$PROJECT_DIR$/restaurant.html" />
-    </list>
+    <list default="true" id="a5698534-a161-441a-9bf4-c89a60bb709e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
