@@ -42,11 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 
 #maincontent {
     background-color: #f3f3f3;
     min-height: 100%;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -80,7 +84,7 @@ nav h1 {
 
 nav h1 a {
     color: #fff;
-    font-size: 14pt;
+    font-size: 1.4rem;
     font-weight: 200;
     letter-spacing: 10px;
     text-transform: uppercase;
@@ -92,8 +96,6 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0 auto;
-    max-width: 1140px;
-
 }
 
 /* Display list items side by side */
@@ -129,10 +131,11 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Filtering ====================== */
+.filters-container{
+    background-color: #0275d8;
+}
 .filter-options {
     width: 100%;
-
-    background-color: #0275d8;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -302,7 +305,7 @@ nav h1 a {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .restaurant-info {
@@ -338,7 +341,7 @@ nav h1 a {
     overflow: hidden;
     border-radius: 20px 0 20px 0;
     position: relative;
-    max-width: 340px;
+    max-width: 32%;
     padding-bottom: 10px;
 }
 
@@ -408,6 +411,10 @@ nav h1 a {
         padding: 20px 0;
         text-align: center;
     }
+    nav h1 a {
+        font-size: 1rem;
+        letter-spacing: 4px;
+    }
 }
 
 @media screen and (max-width: 774px) {
@@ -433,5 +440,8 @@ nav h1 a {
     #restaurant-img {
         width: 44%;
         align-self: center;
+    }
+    #reviews-list li{
+        max-width: 49%;
     }
 }

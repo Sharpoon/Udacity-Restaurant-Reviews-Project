@@ -20,7 +20,7 @@
         <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb">
+    <ul id="breadcrumb" role="navigation">
         <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -32,28 +32,30 @@
 <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-        <div id="map"></div>
+        <div id="map" role="application" aria-label="Google Map" tabindex="0"></div>
     </section>
     <!-- End map -->
-    <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-        <div class="restaurant-info">
-            <h2 id="restaurant-name"></h2>
-            <h3 id="restaurant-cuisine"></h3>
-            <address id="restaurant-address"></address>
-            <table id="restaurant-hours">
-                <caption>Restaurant Opening Hours</caption>
-            </table>
+    <div class="container">
+        <!-- Beginning restaurant -->
+        <section id="restaurant-container">
+            <div class="restaurant-info">
+                <h2 id="restaurant-name" tabindex="0"></h2>
+                <h3 id="restaurant-cuisine" tabindex="0"></h3>
+                <address id="restaurant-address" tabindex="0"></address>
+                <table id="restaurant-hours" tabindex="0">
+                    <caption>Restaurant Opening Hours</caption>
+                </table>
 
-        </div>
-        <img id="restaurant-img">
-    </section>
-    <!-- end restaurant -->
-    <!-- Beginning reviews -->
-    <section id="reviews-container">
-        <ul id="reviews-list"></ul>
-    </section>
-    <!-- End reviews -->
+            </div>
+            <img id="restaurant-img">
+        </section>
+        <!-- end restaurant -->
+        <!-- Beginning reviews -->
+        <section id="reviews-container">
+            <ul id="reviews-list"></ul>
+        </section>
+        <!-- End reviews -->
+    </div>
 </main>
 <!-- End main -->
 
