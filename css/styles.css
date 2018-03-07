@@ -31,7 +31,7 @@ a:hover, a:focus {
 }
 
 a img {
-    border: none 0px #fff;
+    border: none 0 #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,7 +59,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     text-align: center;
     text-transform: uppercase;
 }
-#footer p{
+
+#footer p {
     color: #fff;
     font-size: .8rem;
 }
@@ -156,7 +157,8 @@ nav h1 a {
     padding: 0 10px;
     width: 200px;
 }
-.filter-options select:focus{
+
+.filter-options select:focus {
     border: 3px solid orange;
 }
 
@@ -369,16 +371,18 @@ nav h1 a {
 #restaurant-hours td {
     color: #666;
 }
+
 .skip-link {
     z-index: 1000;
     position: fixed;
     top: -300px;
     right: 0;
 }
-.skip-link:focus{
+
+.skip-link:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
     clip: auto;
     color: #21759b;
     display: block;
@@ -398,6 +402,14 @@ nav h1 a {
 
 /*Media queries*/
 
+@media screen and (max-width: 590px) {
+    .filter-options {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 774px) {
     #restaurants-list li {
         width: 100%;
@@ -414,14 +426,6 @@ nav h1 a {
 
     #reviews-list li {
         max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .filter-options {
-        display: block;
-        padding: 20px 0;
-        text-align: center;
     }
 }
 
