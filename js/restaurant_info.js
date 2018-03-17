@@ -66,7 +66,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     address.innerHTML = restaurant.address;
 
     const image = document.getElementById('restaurant-img');
-    image.className = 'restaurant-img'
+    image.className = 'restaurant-img';
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
     image.alt = `Image of the ${restaurant.name} restaurant`;
     image.srcset = DBHelper.imageSrcset(restaurant);
@@ -88,6 +88,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
     const hours = document.getElementById('restaurant-hours');
+    hours.innerHTML = '';
     for (let key in operatingHours) {
         const row = document.createElement('tr');
 
@@ -108,6 +109,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
+    container.innerHTML = '';
     const title = document.createElement('h2');
     title.innerHTML = 'Reviews';
     container.appendChild(title);
@@ -118,7 +120,9 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
         container.appendChild(noReviews);
         return;
     }
-    const ul = document.getElementById('reviews-list');
+    const ul = document.createElement('ul');
+    ul.id = 'reviews-list';
+
     reviews.forEach(review => {
         ul.appendChild(createReviewHTML(review));
     });
@@ -159,6 +163,9 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant = self.restaurant) => {
     const breadcrumb = document.getElementById('breadcrumb');
+    if (breadcrumb.firstElementChild.nextElementSibling){
+        breadcrumb.removeChild(breadcrumb.firstElementChild.nextElementSibling)
+    }
     const li = document.createElement('li');
     li.innerHTML = restaurant.name;
     breadcrumb.appendChild(li);

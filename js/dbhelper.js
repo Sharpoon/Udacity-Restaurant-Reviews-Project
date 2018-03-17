@@ -8,14 +8,14 @@ class DBHelper {
      * Change this to restaurants.json file location on your server.
      */
     static get DATABASE_URL() {
-        const port = 8000 // Change this to your server port
-        return `http://localhost:${port}/data/restaurants.json`;
+        return 'http://localhost:1337/restaurants';
     }
 
     /**
      * Fetch all restaurants.
      */
-    static fetchRestaurants(callback) {
+
+    /*static fetchRestaurants(callback) {
         let xhr = new XMLHttpRequest();
         xhr.open('GET', DBHelper.DATABASE_URL);
         xhr.onload = () => {
@@ -29,6 +29,26 @@ class DBHelper {
             }
         };
         xhr.send();
+    }*/
+    static fetchRestaurants(callback) {
+        // Try IDB first for speed
+        iDBFetchData()
+            .then(function (data) {
+                if (data.length > 0) {
+                    return callback(null, data)
+                }
+            })
+            // Then try to fetch from network
+            .then(
+            function () {
+                fetch(DBHelper.DATABASE_URL)
+                    .then((response) => response.json())
+                    .then((data) => callback(null, data))
+            })
+
+
+
+
     }
 
     /**
@@ -172,6 +192,7 @@ class DBHelper {
     static homeImageSizes() {
         return (`(min-width: 775px) 270px, (max-width: 394px) 270px, (max-width: 774px) 650px, 800px`);
     }
+
     /**
      * Output sizes attribute for restaurant page images
      * @returns {string}
