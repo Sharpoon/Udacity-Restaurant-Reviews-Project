@@ -37,8 +37,56 @@ module.exports = function (grunt) {
                     cwd: 'img_src/',
                     dest: 'img/'
                 }]
+            },
+            icons: {
+                options: {
+
+                    sizes: [{
+                        name: '48',
+                        width: 48,
+                        quality: 60
+                    }, {
+                        name: '96',
+                        width: 96,
+                        quality: 60
+                    }, {
+                        name: '144',
+                        width: 144,
+                        quality: 60
+                    }, {
+                        name: '192',
+                        width: 192,
+                        quality: 60
+                    }, {
+                        name: '256',
+                        width: 256,
+                        quality: 60
+                    }, {
+                        name: '384',
+                        width: 384,
+                        quality: 60
+                    }, {
+                        name: '512',
+                        width: 512,
+                        quality: 60
+                    },
+
+                    ]
+                },
+
+                /*
+                You don't need to change this part if you don't change
+                the directory structure.
+                */
+                files: [{
+                    expand: true,
+                    src: ['*.{gif,jpg,png}'],
+                    cwd: 'img_src/icons',
+                    dest: 'img/icons'
+                }]
             }
         },
+
 
         /* Clear out the images directory if it exists */
         clean: {
@@ -55,6 +103,7 @@ module.exports = function (grunt) {
                 },
             },
         },
+
 
         /* Copy the "fixed" images that don't go through processing into the images/directory */
         copy: {

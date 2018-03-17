@@ -1,0 +1,50 @@
+{
+  "name": "Restaurant Reviews",
+  "short_name": "RtRw",
+  "icons": [
+    {
+      "src": "/img/icons/restaurant-reviews-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/img/icons/restaurant-reviews-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/img/icons/restaurant-reviews-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/img/icons/restaurant-reviews-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/restaurant-reviews-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/img/icons/restaurant-reviews-384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/img/icons/restaurant-reviews-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff",
+  "theme_color": "#0275d8",
+  "description": "Restaurant Reviews App, Mobile Web Specialist Project.",
+  "dir": "ltr",
+  "lang": "en-GB"
+}
