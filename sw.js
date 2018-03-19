@@ -1,5 +1,5 @@
-importScripts('/js/idb.js');
-importScripts('/js/idb_helpers.js');
+importScripts('dist/js/common.min.js');
+
 
 const CACHE_STATIC = 'static-v3';
 const CACHE_DYNAMIC = 'dynamic-v3';
@@ -12,12 +12,10 @@ self.addEventListener('install', (event) => {
                 return cache.addAll([
                     '/',
                     '/index.html',
-                    '/css/styles.css',
-                    'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
-                    '/js/dbhelper.js',
-                    '/js/main.js',
-                    '/js/idb_helpers.js',
-                    '/js/idb.js'
+                    '/dist/css/styles.min.css',
+                    '/dist/js/dbhelper.min.js',
+                    '/dist/js/main.min.js',
+                    '/dist/js/common.min.js',
 
                 ]);
             })

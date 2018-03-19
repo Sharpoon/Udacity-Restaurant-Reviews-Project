@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5698534-a161-441a-9bf4-c89a60bb709e" name="Default" comment="" />
+    <list default="true" id="a5698534-a161-441a-9bf4-c89a60bb709e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/1-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/1-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/1.jpg" afterPath="$PROJECT_DIR$/src/img/1.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/10-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/10-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/10.jpg" afterPath="$PROJECT_DIR$/src/img/10.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/2-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/2-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/2.jpg" afterPath="$PROJECT_DIR$/src/img/2.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/3-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/3-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/3.jpg" afterPath="$PROJECT_DIR$/src/img/3.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/4-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/4-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/4.jpg" afterPath="$PROJECT_DIR$/src/img/4.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/5-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/5-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/5.jpg" afterPath="$PROJECT_DIR$/src/img/5.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/6-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/6-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/6.jpg" afterPath="$PROJECT_DIR$/src/img/6.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/7-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/7-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/7.jpg" afterPath="$PROJECT_DIR$/src/img/7.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/8-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/8-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/8.jpg" afterPath="$PROJECT_DIR$/src/img/8.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/9-270.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/9-650.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/9.jpg" afterPath="$PROJECT_DIR$/src/img/9.jpg" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-144.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-192.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-256.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-384.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-48.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-512.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-96.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/10.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img_src/icons/restaurant-reviews.png" afterPath="$PROJECT_DIR$/src/img/icons/restaurant-reviews.png" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/js/dbhelper.js" afterPath="$PROJECT_DIR$/src/js/dbhelper.js" />
+      <change beforePath="$PROJECT_DIR$/js/idb.js" afterPath="$PROJECT_DIR$/src/js/common/idb.js" />
+      <change beforePath="$PROJECT_DIR$/js/idb_helpers.js" afterPath="$PROJECT_DIR$/src/js/common/idb_helpers.js" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/src/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/js/restaurant_info.js" afterPath="$PROJECT_DIR$/src/js/restaurant_info.js" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/restaurant reviews.afdesign" afterPath="$PROJECT_DIR$/src/img/restaurant reviews.afdesign" />
+      <change beforePath="$PROJECT_DIR$/restaurant.html" afterPath="$PROJECT_DIR$/restaurant.html" />
+      <change beforePath="$PROJECT_DIR$/sw.js" afterPath="$PROJECT_DIR$/sw.js" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +79,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="48" />
+            <state relative-caret-position="864">
+              <caret line="50" column="84" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -27,30 +89,19 @@
       <file leaf-file-name="restaurant.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restaurant.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="1224">
+              <caret line="71" column="63" lean-forward="false" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+        <entry file="file://$PROJECT_DIR$/src/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
+            <state relative-caret-position="-2256">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="e#78#113#0" expanded="false" />
                 <element signature="e#1311#1487#0" expanded="false" />
                 <element signature="e#1332#1394#0" expanded="false" />
                 <element signature="e#1400#1481#0" expanded="false" />
@@ -59,21 +110,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbhelper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/dbhelper.js">
+      <file leaf-file-name="restaurant_info.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/restaurant_info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="580">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idb_helpers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/idb_helpers.js">
+      <file leaf-file-name="dbhelper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/dbhelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="2672">
+              <caret line="181" column="21" lean-forward="false" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+              <caret line="182" column="20" lean-forward="false" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
+              <caret line="183" column="20" lean-forward="false" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+              <caret line="184" column="20" lean-forward="false" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,28 +156,18 @@
       <file leaf-file-name="sw.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="808">
-              <caret line="43" column="3" lean-forward="false" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+            <state relative-caret-position="360">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest.json">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sass/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2312">
-              <caret line="124" column="80" lean-forward="false" selection-start-line="124" selection-start-column="80" selection-end-line="124" selection-end-column="80" />
+            <state relative-caret-position="240">
+              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -115,9 +179,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>DBH</find>
+      <find>fetchRestaurants</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,18 +199,29 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/js/idb_database.js" />
-        <option value="$PROJECT_DIR$/js/restaurant_info.js" />
         <option value="$PROJECT_DIR$/js/dbhelper.js" />
         <option value="$PROJECT_DIR$/js/idb_helpers.js" />
-        <option value="$PROJECT_DIR$/sw.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/sass/normalize.scss" />
+        <option value="$PROJECT_DIR$/sass/styles.scss" />
+        <option value="$PROJECT_DIR$/js/common/common.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/restaurant_info.js" />
+        <option value="$PROJECT_DIR$/dist/js/common.js" />
+        <option value="$PROJECT_DIR$/dist/js/js/common/dbhelper.min.js" />
+        <option value="$PROJECT_DIR$/dist/js/js/common/idb_helpers.min.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/js/common/dbhelper.js" />
+        <option value="$PROJECT_DIR$/dist/js/common.min.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/restaurant.html" />
-        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/sw.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/js/dbhelper.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -167,8 +249,8 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1273" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
   </component>
@@ -206,7 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,17 +308,18 @@
             <path>
               <item name="restreview" type="b2602c69:ProjectViewProjectNode" />
               <item name="restreview" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="img_src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="restreview" type="b2602c69:ProjectViewProjectNode" />
               <item name="restreview" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -256,10 +338,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\restreview" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\restreview\src\img" />
+      <recent name="C:\laragon\www\restreview\src" />
+      <recent name="C:\laragon\www\restreview\js" />
+      <recent name="C:\laragon\www\restreview\js\common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,10 +367,9 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.145469" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3006483" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -330,96 +418,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
-          <folding>
-            <element signature="e#78#113#0" expanded="false" />
-            <element signature="e#1311#1487#0" expanded="false" />
-            <element signature="e#1332#1394#0" expanded="false" />
-            <element signature="e#1400#1481#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7500">
-          <caret line="375" column="23" lean-forward="true" selection-start-line="375" selection-start-column="23" selection-end-line="375" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CODEOWNERS">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html" />
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3900">
-          <caret line="195" column="21" lean-forward="false" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/restaurants-not-used.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/restaurant_info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="e#25#60#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="e#78#113#0" expanded="false" />
-            <element signature="e#1311#1487#0" expanded="false" />
-            <element signature="e#1332#1394#0" expanded="false" />
-            <element signature="e#1400#1481#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/styles.min.css" />
-    <entry file="file://$PROJECT_DIR$/src/scss/styles.scss" />
-    <entry file="file://$PROJECT_DIR$/restaurant.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.min.js.map" />
-    <entry file="file://$PROJECT_DIR$/assets/js/main.min.js" />
     <entry file="file://$PROJECT_DIR$/assets/js/restaurant_info.min.js" />
     <entry file="file://$PROJECT_DIR$/src/scripts/restaurant_info.js" />
-    <entry file="file://$PROJECT_DIR$/gulpfile.js" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="656">
@@ -448,12 +448,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
           <caret line="144" column="60" lean-forward="false" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="61" />
           <folding>
-            <element signature="e#78#113#0" expanded="false" />
             <element signature="e#1311#1487#0" expanded="false" />
             <element signature="e#1332#1394#0" expanded="false" />
             <element signature="e#1400#1481#0" expanded="false" />
@@ -475,13 +474,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/restaurant_info.js">
+    <entry file="file://$PROJECT_DIR$/src/js/restaurant_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1220">
           <caret line="61" column="61" lean-forward="true" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
-          <folding>
-            <element signature="e#25#60#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -501,22 +498,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/restaurant_info.js">
+    <entry file="file://$PROJECT_DIR$/src/js/restaurant_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding>
-            <element signature="e#25#60#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
           <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
           <folding>
-            <element signature="e#78#113#0" expanded="false" />
             <element signature="e#1311#1487#0" expanded="false" />
             <element signature="e#1332#1394#0" expanded="false" />
             <element signature="e#1400#1481#0" expanded="false" />
@@ -550,14 +544,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -565,72 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8880">
-          <caret line="444" column="23" lean-forward="false" selection-start-line="444" selection-start-column="23" selection-end-line="444" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/restaurants-not-used.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/restaurant_info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1132">
-          <caret line="127" column="7" lean-forward="true" selection-start-line="127" selection-start-column="7" selection-end-line="127" selection-end-column="7" />
-          <folding>
-            <element signature="e#25#60#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/idb_helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
-          <folding>
-            <element signature="e#78#113#0" expanded="false" />
-            <element signature="e#1311#1487#0" expanded="false" />
-            <element signature="e#1332#1394#0" expanded="false" />
-            <element signature="e#1400#1481#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/dbhelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="43" column="3" lean-forward="false" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2312">
-          <caret line="124" column="80" lean-forward="false" selection-start-line="124" selection-start-column="80" selection-end-line="124" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,26 +566,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="48" />
+        <state relative-caret-position="120">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/normalize.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3160">
+          <caret line="156" column="45" lean-forward="false" selection-start-line="156" selection-start-column="45" selection-end-line="156" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="396" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="446" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-828">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/styles.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common/common.js" />
+    <entry file="file://$PROJECT_DIR$/dist/js/js/common/dbhelper.min.js" />
+    <entry file="file://$PROJECT_DIR$/dist/js/js/common/idb_helpers.min.js" />
+    <entry file="file://$PROJECT_DIR$/dist/js/js/common/idb.min.js" />
+    <entry file="file://$PROJECT_DIR$/dist/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5076">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/idb_helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common/idb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2016">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/common.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="0" column="4410" lean-forward="false" selection-start-line="0" selection-start-column="4410" selection-end-line="0" selection-end-column="4410" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/restaurant_info.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/main.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1172">
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/dbhelper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/restaurant_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/restaurant.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state relative-caret-position="1224">
+          <caret line="71" column="63" lean-forward="false" selection-start-line="71" selection-start-column="63" selection-end-line="71" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="864">
+          <caret line="50" column="84" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2256">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#1311#1487#0" expanded="false" />
+            <element signature="e#1332#1394#0" expanded="false" />
+            <element signature="e#1400#1481#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/dbhelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2672">
+          <caret line="181" column="21" lean-forward="false" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+          <caret line="182" column="20" lean-forward="false" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
+          <caret line="183" column="20" lean-forward="false" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+          <caret line="184" column="20" lean-forward="false" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="33" />
           <folding />
         </state>
       </provider>
