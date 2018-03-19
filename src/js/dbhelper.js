@@ -32,22 +32,19 @@ class DBHelper {
     }*/
     static fetchRestaurants(callback) {
         // Try IDB first for speed
-        iDBFetchData()
-            .then(function (data) {
-                if (data.length > 0) {
-                    return callback(null, data)
-                }
-            })
-            // Then try to fetch from network
-            .then(
-            function () {
-                fetch(DBHelper.DATABASE_URL)
-                    .then((response) => response.json())
-                    .then((data) => callback(null, data))
-            })
+        if ('indexedDB' in window) {
+            iDBFetchData()
+                .then(function (data) {
+                    if (data.length > 0) {
+                        return callback(null, data)
+                    }
+                });
+        }
 
-
-
+        // Also try to fetch from network
+        fetch(DBHelper.DATABASE_URL)
+            .then((response) => response.json())
+            .then((data) => callback(null, data))
 
     }
 

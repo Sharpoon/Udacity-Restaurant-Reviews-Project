@@ -3,66 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a5698534-a161-441a-9bf4-c89a60bb709e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/1-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/1-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/1.jpg" afterPath="$PROJECT_DIR$/src/img/1.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/10-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/10-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/10.jpg" afterPath="$PROJECT_DIR$/src/img/10.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/2-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/2-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/2.jpg" afterPath="$PROJECT_DIR$/src/img/2.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/3-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/3-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/3.jpg" afterPath="$PROJECT_DIR$/src/img/3.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/4-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/4-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/4.jpg" afterPath="$PROJECT_DIR$/src/img/4.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/5-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/5-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/5.jpg" afterPath="$PROJECT_DIR$/src/img/5.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/6-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/6-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/6.jpg" afterPath="$PROJECT_DIR$/src/img/6.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/7-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/7-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/7.jpg" afterPath="$PROJECT_DIR$/src/img/7.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/8-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/8-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/8.jpg" afterPath="$PROJECT_DIR$/src/img/8.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/9-270.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/9-650.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/9.jpg" afterPath="$PROJECT_DIR$/src/img/9.jpg" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-144.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-192.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-256.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-384.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-48.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-512.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/icons/restaurant-reviews-96.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img_src/icons/restaurant-reviews.png" afterPath="$PROJECT_DIR$/src/img/icons/restaurant-reviews.png" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/dbhelper.js" afterPath="$PROJECT_DIR$/src/js/dbhelper.js" />
-      <change beforePath="$PROJECT_DIR$/js/idb.js" afterPath="$PROJECT_DIR$/src/js/common/idb.js" />
-      <change beforePath="$PROJECT_DIR$/js/idb_helpers.js" afterPath="$PROJECT_DIR$/src/js/common/idb_helpers.js" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/src/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/js/restaurant_info.js" afterPath="$PROJECT_DIR$/src/js/restaurant_info.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/restaurant reviews.afdesign" afterPath="$PROJECT_DIR$/src/img/restaurant reviews.afdesign" />
-      <change beforePath="$PROJECT_DIR$/restaurant.html" afterPath="$PROJECT_DIR$/restaurant.html" />
-      <change beforePath="$PROJECT_DIR$/sw.js" afterPath="$PROJECT_DIR$/sw.js" />
+      <change beforePath="$PROJECT_DIR$/dist/css/styles.min.css" afterPath="$PROJECT_DIR$/dist/css/styles.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/js/dbhelper.js" afterPath="$PROJECT_DIR$/src/js/dbhelper.js" />
+      <change beforePath="$PROJECT_DIR$/src/sass/styles.scss" afterPath="$PROJECT_DIR$/src/sass/styles.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -120,20 +63,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbhelper.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbhelper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/dbhelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2672">
-              <caret line="181" column="21" lean-forward="false" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
-              <caret line="182" column="20" lean-forward="false" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
-              <caret line="183" column="20" lean-forward="false" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
-              <caret line="184" column="20" lean-forward="false" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
+            <state relative-caret-position="192">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
@@ -166,8 +106,8 @@
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sass/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="364">
+              <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -220,8 +160,9 @@
         <option value="$PROJECT_DIR$/restaurant.html" />
         <option value="$PROJECT_DIR$/sw.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/js/dbhelper.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/sass/styles.scss" />
+        <option value="$PROJECT_DIR$/src/js/dbhelper.js" />
       </list>
     </option>
   </component>
@@ -308,12 +249,13 @@
             <path>
               <item name="restreview" type="b2602c69:ProjectViewProjectNode" />
               <item name="restreview" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="restreview" type="b2602c69:ProjectViewProjectNode" />
               <item name="restreview" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -657,14 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1172">
@@ -733,21 +667,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/dbhelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2672">
-          <caret line="181" column="21" lean-forward="false" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
-          <caret line="182" column="20" lean-forward="false" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
-          <caret line="183" column="20" lean-forward="false" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
-          <caret line="184" column="20" lean-forward="false" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/dbhelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
