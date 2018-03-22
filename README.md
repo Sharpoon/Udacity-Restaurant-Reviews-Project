@@ -1,6 +1,13 @@
 # Mobile Web Specialist Certification Course
 ---
+*Please check comparison of Lighthouse performance score between the Python server and a local Apache server.*
+
+Find in the repo -
+1. lighthouse_report_apache_server.json
+2. lighthouse_report_python_server.json
+
 #### _Three Stage Course Material Project - Restaurant Reviews_
+
 
 ## Project Overview: Stage 1
 
