@@ -39,6 +39,7 @@ class DBHelper {
                         return callback(null, data)
                     }
                 });
+
         }
 
         // Also try to fetch from network
@@ -164,32 +165,32 @@ class DBHelper {
     }
 
     /**
-     * Restaurant image URL.
-     */
-    static imageUrlForRestaurant(restaurant) {
-        return (`/img/${restaurant.photograph}`);
-    }
-
-    /**
-     * Generate srcset for images
+     *
      * @param restaurant
+     * @param homepage/ boolean
      * @returns {string}
      */
-    static imageSrcset(restaurant) {
-        return (`dist/img/${restaurant.id}-270.jpg 270w,
+    static pictureElementForRestaurant(restaurant, homepage) {
+        let sizes;
+        homepage ? sizes = "(max-width: 524px) 400px, (max-width: 774px) 650px,  270px" : sizes = "(max-width: 394px) 270px, (max-width: 1064px) 650px, (min-width: 1065px) 800px, 800px";
+        return `            
+                <source type="image/webp"
+                    data-webp-srcset="dist/img/${restaurant.id}-270.webp 270w,
+                dist/img/${restaurant.id}-400.webp 400w,
+                dist/img/${restaurant.id}-650.webp 650w,
+                dist/img/${restaurant.id}.webp 800w"
+                sizes="${sizes}"
+                />
+                <source data-jpeg-srcset="dist/img/${restaurant.id}-270.jpg 270w,
                 dist/img/${restaurant.id}-400.jpg 400w,
                 dist/img/${restaurant.id}-650.jpg 650w,
-                dist/img/${restaurant.id}.jpg 800w               
-                `);
+                dist/img/${restaurant.id}.jpg 800w"
+                sizes="${sizes}"
+                />
+                             
+                <img data-img-src="dist/img/${restaurant.id}.jpg" class="restaurant-img" alt="Image of the ${restaurant.name} restaurant" />`;
     }
 
-    /**
-     * Output sizes attribute for homepage images
-     * @returns {string}
-     */
-    static homeImageSizes() {
-        return (`(max-width: 524px) 400px, (max-width: 774px) 650px,  270px`);
-    }
 
     /**
      * Output sizes attribute for restaurant page images

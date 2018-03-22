@@ -3,11 +3,11 @@ let map;
 /**
  * Register Service Worker.
  */
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('/sw.js')
         .then(() => console.log('Service worker registered!') );
-}
+}*/
 /**
  * Initialize Google map, called from HTML.
  */
@@ -65,12 +65,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     const address = document.getElementById('restaurant-address');
     address.innerHTML = restaurant.address;
 
-    const image = document.getElementById('restaurant-img');
-    image.className = 'restaurant-img';
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
-    image.alt = `Image of the ${restaurant.name} restaurant`;
-    image.srcset = DBHelper.imageSrcset(restaurant);
-    image.sizes = DBHelper.restaurantImageSizes();
+    const picture = document.getElementById('restaurant-img');
+    picture.innerHTML = DBHelper.pictureElementForRestaurant(restaurant, false);
+
 
     const cuisine = document.getElementById('restaurant-cuisine');
     cuisine.innerHTML = restaurant.cuisine_type;
@@ -79,6 +76,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     if (restaurant.operating_hours) {
         fillRestaurantHoursHTML();
     }
+    lazyLoadImages();
     // fill reviews
     fillReviewsHTML();
 };

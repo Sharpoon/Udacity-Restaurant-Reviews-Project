@@ -51,3 +51,42 @@ function iDBClearAllData() {
             return tx.complete;
         });
 }
+
+/**
+ * Use an IntersectionObserver to lazyload images.
+ */
+function lazyLoadImages() {
+    const pictures = document.querySelectorAll('picture');
+    const config = {
+        rootMargin: '-200px 0px 0px 0px',
+        threshold: 0.5
+    };
+
+    let observer = new IntersectionObserver(function (entries, self) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadImage(entry.target);
+                self.unobserve(entry.target);
+            }
+        });
+    }, config);
+
+    pictures.forEach(picture => {
+        observer.observe(picture);
+    });
+}
+
+/**
+ * Update picture element src and srcset
+ * @param picture
+ */
+function loadImage(picture) {
+
+    const webpSrcSet = picture.children[0].getAttribute('data-webp-srcset');
+    const jpegSrcSet = picture.children[1].getAttribute('data-jpeg-srcset');
+    const imgSrc = picture.children[2].getAttribute('data-img-src');
+    if (!imgSrc ) { return; }
+    picture.children[0].srcset = webpSrcSet;
+    picture.children[1].srcset = jpegSrcSet;
+    picture.children[2].src = imgSrc;
+}

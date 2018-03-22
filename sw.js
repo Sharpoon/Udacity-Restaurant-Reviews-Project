@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
                 return cache.addAll([
                     '/',
                     '/index.html',
-                    '/dist/css/styles.min.css',
+
                     '/dist/js/dbhelper.min.js',
                     '/dist/js/main.min.js',
                     '/dist/js/common.min.js',

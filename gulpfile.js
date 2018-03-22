@@ -36,7 +36,7 @@ gulp.task('scripts-common', function () {
 
 
 gulp.task('styles', function () {
-    gulp.src('src/sass/styles.scss')
+    gulp.src('src/sass/*.scss')
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -104,6 +104,24 @@ gulp.task('responsive-images', function () {
                 },
                 {
                     width: 800,
+                    quality: 20
+                },
+                {
+                    width: 270,
+                    rename: {suffix: '-270', extname: '.webp'}
+                },
+                {
+                    width: 400,
+                    rename: {suffix: '-400', extname: '.webp'}
+                },
+                {
+                    width: 650,
+                    rename: {suffix: '-650', extname: '.webp'}
+                },
+                {
+                    width: 800,
+                    rename: { extname: '.webp'},
+                    quality: 20
                 }
             ]
         }, {quality: 50}))

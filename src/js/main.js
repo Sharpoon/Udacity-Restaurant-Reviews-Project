@@ -12,13 +12,17 @@ if ('serviceWorker' in navigator) {
         .register('/sw.js')
         .then(() => console.log('Service worker registered!') );
 }
+
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
     fetchNeighborhoods();
     fetchCuisines();
+
 });
+
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -139,6 +143,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
         ul.append(createRestaurantHTML(restaurant));
     });
     addMarkersToMap();
+    lazyLoadImages();
 };
 
 /**
@@ -148,13 +153,9 @@ createRestaurantHTML = (restaurant) => {
     const li = document.createElement('li');
     li.setAttribute('tabindex','0');
     li.setAttribute('aria-label', restaurant.name);
-    const image = document.createElement('img');
-    image.className = 'restaurant-img';
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
-    image.srcset = DBHelper.imageSrcset(restaurant);
-    image.sizes = DBHelper.homeImageSizes();
-    image.alt = `Image of the ${restaurant.name} restaurant`;
-    li.append(image);
+    const picture = document.createElement('picture');
+    picture.innerHTML = DBHelper.pictureElementForRestaurant(restaurant, true);
+    li.append(picture);
 
     const name = document.createElement('h2');
     name.innerHTML = restaurant.name;
@@ -171,10 +172,14 @@ createRestaurantHTML = (restaurant) => {
     const more = document.createElement('a');
     more.innerHTML = 'View Restaurant';
     more.href = DBHelper.urlForRestaurant(restaurant);
-    li.append(more)
+    li.append(more);
 
     return li
 };
+
+
+
+
 
 /**
  * Add markers for current restaurants to the map.
@@ -190,5 +195,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
 
 };
-
 
