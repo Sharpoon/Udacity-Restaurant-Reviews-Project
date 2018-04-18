@@ -3,11 +3,11 @@ let map;
 /**
  * Register Service Worker.
  */
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('/sw.js')
         .then(() => console.log('Service worker registered!') );
-}*/
+}
 /**
  * Initialize Google map, called from HTML.
  */
@@ -108,7 +108,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
     container.innerHTML = '';
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.innerHTML = 'Reviews';
     container.appendChild(title);
 

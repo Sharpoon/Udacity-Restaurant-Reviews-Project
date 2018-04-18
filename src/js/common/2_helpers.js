@@ -53,10 +53,49 @@ function iDBClearAllData() {
 }
 
 /**
+ * Use an IntersectionObserver to lazyload Google Map.
+ */
+function lazyLoadMap() {
+    const map = document.querySelector('#map');
+    const mapScriptTag = document.createElement('script');
+    mapScriptTag.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAn0CqkAymgcb7syjdi0ke0GPu_OFPTKVk&libraries=places&callback=initMap';
+    if (!('IntersectionObserver' in window)) {
+        document.body.appendChild(mapScriptTag);
+        return;
+
+    }
+    const config = {
+        root: null,
+        rootMargin: '0px 0px 0px 0px',
+        threshold: 0.1
+    };
+
+
+    let mapObserver = new IntersectionObserver(function (entries, self) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log(entry.isIntersecting);
+                document.body.appendChild(mapScriptTag);
+                self.unobserve(entry.target);
+            }
+        });
+    }, config);
+
+    mapObserver.observe(map);
+}
+
+/**
  * Use an IntersectionObserver to lazyload images.
  */
 function lazyLoadImages() {
     const pictures = document.querySelectorAll('picture');
+    if (!('IntersectionObserver' in window)) {
+        pictures.forEach(picture => {
+            loadImage(picture);
+        });
+        return;
+
+    }
     const config = {
         rootMargin: '-200px 0px 0px 0px',
         threshold: 0.5
@@ -90,3 +129,4 @@ function loadImage(picture) {
     picture.children[1].srcset = jpegSrcSet;
     picture.children[2].src = imgSrc;
 }
+

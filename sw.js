@@ -12,11 +12,13 @@ self.addEventListener('install', (event) => {
                 return cache.addAll([
                     '/',
                     '/index.html',
-
+                    '/restaurant.html',
+                    '/dist/js/common.min.js',
+                    '/dist/js/restaurant_info.min.js',
                     '/dist/js/dbhelper.min.js',
                     '/dist/js/main.min.js',
-                    '/dist/js/common.min.js',
-
+                    '/dist/css/styles.min.css',
+                    '/dist/css/restaurant_details.min.css'
                 ]);
             })
     )
