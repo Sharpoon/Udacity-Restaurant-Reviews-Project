@@ -7,47 +7,34 @@ class DBHelper {
      * Database URL.
      * Change this to restaurants.json file location on your server.
      */
-    static get DATABASE_URL() {
+    static get RESTAURANTS_URL() {
         return 'http://localhost:1337/restaurants';
+    }
+
+    static get REVIEWS_URL() {
+        return 'http://localhost:1337/reviews';
     }
 
     /**
      * Fetch all restaurants.
      */
-
-    /*static fetchRestaurants(callback) {
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', DBHelper.DATABASE_URL);
-        xhr.onload = () => {
-            if (xhr.status === 200) { // Got a success response from server!
-                const json = JSON.parse(xhr.responseText);
-                const restaurants = json.restaurants;
-                callback(null, restaurants);
-            } else { // Oops!. Got an error from server.
-                const error = (`Request failed. Returned status of ${xhr.status}`);
-                callback(error, null);
-            }
-        };
-        xhr.send();
-    }*/
     static fetchRestaurants(callback) {
         // Try IDB first for speed
         if ('indexedDB' in window) {
-            iDBFetchData()
+            iDBFetchData('restaurants-store')
                 .then(function (data) {
                     if (data.length > 0) {
                         return callback(null, data)
                     }
                 });
-
         }
-
         // Also try to fetch from network
-        fetch(DBHelper.DATABASE_URL)
+        fetch(DBHelper.RESTAURANTS_URL)
             .then((response) => response.json())
             .then((data) => callback(null, data))
-
     }
+
+
 
     /**
      * Fetch a restaurant by its ID.
@@ -205,7 +192,7 @@ class DBHelper {
      * Map marker for a restaurant.
      */
     static mapMarkerForRestaurant(restaurant, map) {
-        if(window.google){
+        if (window.google) {
             const marker = new google.maps.Marker({
                     position: restaurant.latlng,
                     title: restaurant.name,

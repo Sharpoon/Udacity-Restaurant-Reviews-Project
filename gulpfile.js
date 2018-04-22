@@ -21,7 +21,7 @@ gulp.task('watch', ['styles', 'scripts', 'scripts-common'], function () {
 
 gulp.task('scripts', function () {
     gulp.src('src/js/*.js')
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/js'));
 });
@@ -30,7 +30,7 @@ gulp.task('scripts', function () {
 gulp.task('scripts-common', function () {
     gulp.src('src/js/common/*.js')
         .pipe(concat('common.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fetchCuisines();
     updateRestaurants();
     // allow time for restaurants to load before lazyload setup
-    setTimeout(lazyLoadMap,1000);
+    setTimeout(lazyLoadMap,2000);
 
 });
 

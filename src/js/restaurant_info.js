@@ -1,12 +1,13 @@
 let restaurant;
 let map;
+let reviews;
 /**
  * Register Service Worker.
  */
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('/sw.js')
-        .then(() => console.log('Service worker registered!') );
+        .then(() => console.log('Service worker registered!'));
 }
 /**
  * Initialize Google map, called from HTML.
@@ -27,7 +28,6 @@ window.initMap = () => {
     });
 
 };
-
 
 
 /**
@@ -52,8 +52,45 @@ fetchRestaurantFromURL = (callback) => {
             fillRestaurantHTML();
             callback(null, restaurant)
         });
+        // Fetch reviews
+        // Try IDB first for speed
+        if ('indexedDB' in window) {
+            iDBFetchReviewsByID(id)
+                .then((data) => {
+                    if (data.length > 0) {
+                        fillReviewsHTML(data);
+                    } else{
+                        fetchReviewsFromNetwork(id);
+                    }
+                })
+        } else{
+
+            // Also try to fetch from network
+            fetchReviewsFromNetwork(id);
+        }
+
+
+
+
     }
 };
+/**
+ * Fetch reviews by id from network.
+ * @param id
+ */
+fetchReviewsFromNetwork = (id) => {
+    const reviewsEndpoint = `${DBHelper.REVIEWS_URL}/?restaurant_id=${id}`;
+    fetch(reviewsEndpoint)
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.length > 0) {
+                fillReviewsHTML(data);
+            }
+        })
+        .catch((err)=>console.log(err));
+};
+
+
 
 /**
  * Create restaurant HTML and add it to the webpage
@@ -77,8 +114,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
         fillRestaurantHoursHTML();
     }
     lazyLoadImages();
-    // fill reviews
-    fillReviewsHTML();
+
 };
 
 /**
@@ -105,7 +141,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 /**
  * Create all reviews HTML and add them to the webpage.
  */
-fillReviewsHTML = (reviews = self.restaurant.reviews) => {
+fillReviewsHTML = (reviews) => {
     const container = document.getElementById('reviews-container');
     container.innerHTML = '';
     const title = document.createElement('h3');
@@ -132,8 +168,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
     const li = document.createElement('li');
-    li.setAttribute('tabindex','0');
-    li.setAttribute('aria-label','Restaurant review');
+    li.setAttribute('tabindex', '0');
+    li.setAttribute('aria-label', 'Restaurant review');
     const header = document.createElement('header');
     li.appendChild(header);
     const name = document.createElement('p');
@@ -142,7 +178,8 @@ createReviewHTML = (review) => {
     header.appendChild(name);
 
     const date = document.createElement('p');
-    date.innerHTML = review.date;
+    const reviewDate = new Date(review.createdAt);
+    date.innerHTML = reviewDate.toLocaleDateString();
     header.appendChild(date);
 
     const rating = document.createElement('p');
@@ -161,7 +198,7 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant = self.restaurant) => {
     const breadcrumb = document.getElementById('breadcrumb');
-    if (breadcrumb.firstElementChild.nextElementSibling){
+    if (breadcrumb.firstElementChild.nextElementSibling) {
         breadcrumb.removeChild(breadcrumb.firstElementChild.nextElementSibling)
     }
     const li = document.createElement('li');

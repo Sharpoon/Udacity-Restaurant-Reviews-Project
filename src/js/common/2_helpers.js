@@ -6,18 +6,23 @@ let dbPromise = idb.open('restaurant-reviews', 1, function (db) {
     if (!db.objectStoreNames.contains('restaurants-store')) {
         db.createObjectStore('restaurants-store', {keyPath: 'id'});
     }
+    if (!db.objectStoreNames.contains('reviews-store')) {
+        let reviewStore = db.createObjectStore('reviews-store', {keyPath: 'id'});
+        reviewStore.createIndex('restaurant', 'restaurant_id');
+    }
 });
 
 /**
  * Add data to restaurants store in IDB
  * @param data
+ * @param objectStore
  * @returns {Promise}
  */
-function iDBAddData(data) {
+function iDBAddData(data, objectStore) {
     return dbPromise.then(function (db) {
         if (!db) return;
-        const tx = db.transaction('restaurants-store', 'readwrite');
-        const store = tx.objectStore('restaurants-store');
+        const tx = db.transaction(objectStore, 'readwrite');
+        const store = tx.objectStore(objectStore);
         data.forEach(function (restaurant) {
             store.put(restaurant);
             return tx.complete;
@@ -29,12 +34,30 @@ function iDBAddData(data) {
  * Fetch all data from restaurants store in IDB
  * @returns {Promise}
  */
-function iDBFetchData() {
+function iDBFetchData(objectStore) {
     return dbPromise.then(function (db) {
         if (!db) return;
-        const tx = db.transaction('restaurants-store', 'readonly');
-        const store = tx.objectStore('restaurants-store');
+        const tx = db.transaction(objectStore, 'readonly');
+        const store = tx.objectStore(objectStore);
         return store.getAll();
+    });
+}
+
+/**
+ * Fetch all data for restaurant by id in IDB store
+ * @returns {Promise}
+ */
+function iDBFetchReviewsByID(restaurantID) {
+    return dbPromise.then(function (db) {
+
+        if (!db) return;
+        const tx = db.transaction('reviews-store', 'readonly');
+        const store = tx.objectStore('reviews-store');
+
+        const dbIndex = store.index('restaurant');
+
+        return dbIndex.getAll(parseInt(restaurantID));
+
     });
 }
 
@@ -42,11 +65,11 @@ function iDBFetchData() {
  * Remove all data from restaurants store in IDB
  * @returns {Promise}
  */
-function iDBClearAllData() {
+function iDBClearAllData(objectStore) {
     return dbPromise
-        .then(function(db) {
-            const tx = db.transaction('restaurants-store', 'readwrite');
-            const store = tx.objectStore('restaurants-store');
+        .then(function (db) {
+            const tx = db.transaction(objectStore, 'readwrite');
+            const store = tx.objectStore(objectStore);
             store.clear();
             return tx.complete;
         });
@@ -124,7 +147,9 @@ function loadImage(picture) {
     const webpSrcSet = picture.children[0].getAttribute('data-webp-srcset');
     const jpegSrcSet = picture.children[1].getAttribute('data-jpeg-srcset');
     const imgSrc = picture.children[2].getAttribute('data-img-src');
-    if (!imgSrc ) { return; }
+    if (!imgSrc) {
+        return;
+    }
     picture.children[0].srcset = webpSrcSet;
     picture.children[1].srcset = jpegSrcSet;
     picture.children[2].src = imgSrc;
