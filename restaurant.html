@@ -54,6 +54,33 @@
         <!-- end restaurant -->
         <!-- Beginning reviews -->
         <section id="reviews-container">
+            <div id="user-review" role="dialog" aria-hidden="true">
+                <form action="" id="user-review-form">
+                    <div class="form-field">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-field">
+                        <p id="rating-label">Rating</p>
+                        <label class="radio" for="rating1">1</label>
+                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating1" value="1" required>
+                        <label class="radio" for="rating2">2</label>
+                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating2" value="2" required>
+                        <label class="radio" for="rating3">3</label>
+                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating3" value="3" required>
+                        <label class="radio" for="rating4">4</label>
+                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating4" value="4" required>
+                        <label class="radio" for="rating5">5</label>
+                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating5" value="5" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="comments">Comments</label>
+                        <textarea name="comments" id="comments" rows="8" required></textarea>
+                    </div>
+                    <button class="btn" type="submit">Submit Review</button>
+                </form>
+                <button class="btn" id="review-modal-trigger">Leave a Review</button>
+            </div>
             <ul id="reviews-list"></ul>
         </section>
         <!-- End reviews -->

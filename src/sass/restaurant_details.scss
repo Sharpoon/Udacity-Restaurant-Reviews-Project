@@ -113,9 +113,74 @@
 .restaurant-info {
   margin: 0 20px 20px 0;
 }
+.btn{
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  &:hover, &:focus{
+    box-shadow: #01447e 1px 2px 4px 1px;
+  }
+}
+
 
 #reviews-container {
   padding: 30px 40px 80px;
+  position: relative;
+  button#review-modal-trigger {
+    position: absolute;
+    bottom: -37px;
+    right: 0;
+
+  }
+  #user-review {
+    position: absolute;
+    right: 25px;
+    top: -2px;
+    z-index: 1;
+    background-color: #ddd;
+
+    form {
+      min-width: 280px;
+      max-width: 100%;
+      padding: 0 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+      box-shadow: #ccc 1px 1px 10px 0;
+      visibility: hidden;
+      height: 0;
+      transition: height .2s ease;
+      &.visible{
+        height: 400px;
+        visibility: visible;
+        padding: 20px;
+      }
+      .form-field {
+        padding: 10px 2px;
+        label:not(.radio){
+          display: block;
+        }
+        textarea{
+          width: 100%;
+          resize: vertical;
+        }
+        p{
+          margin: 0;
+        }
+        input[type="text"]{
+          height: 25px;
+          width: 100%;
+        }
+
+      }
+
+      input[type="radio"]{
+        margin-right: 15px;
+    }
+
+    }
+  }
+
 }
 
 #reviews-container h2 {

@@ -59,17 +59,15 @@ fetchRestaurantFromURL = (callback) => {
                 .then((data) => {
                     if (data.length > 0) {
                         fillReviewsHTML(data);
-                    } else{
+                    } else {
                         fetchReviewsFromNetwork(id);
                     }
                 })
-        } else{
+        } else {
 
             // Also try to fetch from network
             fetchReviewsFromNetwork(id);
         }
-
-
 
 
     }
@@ -87,9 +85,8 @@ fetchReviewsFromNetwork = (id) => {
                 fillReviewsHTML(data);
             }
         })
-        .catch((err)=>console.log(err));
+        .catch((err) => console.log(err));
 };
-
 
 
 /**
@@ -143,7 +140,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews) => {
     const container = document.getElementById('reviews-container');
-    container.innerHTML = '';
+    // container.innerHTML = '';
     const title = document.createElement('h3');
     title.innerHTML = 'Reviews';
     container.appendChild(title);
@@ -221,5 +218,58 @@ getParameterByName = (name, url) => {
         return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 };
+
+/** Review Modal **/
+const modal = document.getElementById('user-review');
+const modalToggle = modal.querySelector('#review-modal-trigger');
+const reviewForm = modal.querySelector('#user-review-form');
+
+// lock focus to modal
+modalToggle.addEventListener('keydown', (e) => {
+    if (e.keyCode === 9 && reviewForm.classList.contains('visible')) {
+        e.preventDefault();
+        reviewForm.name.focus();
+    }
+
+});
+// Close modal with escape key
+document.addEventListener('keydown',(e)=>{
+    if (e.keyCode === 27 && reviewForm.classList.contains('visible')) {
+        reviewForm.classList.remove('visible');
+        modalClose();
+    }
+});
+// Control modal visibility
+modalToggle.addEventListener('click', () => {
+    reviewForm.scrollIntoView();
+    reviewForm.classList.toggle('visible');
+    if(reviewForm.classList.contains('visible')){
+        modalOpen();
+    } else{
+        modalClose();
+    }
+    setTimeout(() => {
+        reviewForm.name.focus();
+    }, 500);
+});
+
+/**
+ * Actions when modal is opened.
+ */
+function modalOpen(){
+    modal.setAttribute('aria-hidden','false');
+    modalToggle.innerText = 'Close';
+    modalToggle.setAttribute('aria-label','close');
+}
+
+/**
+ * Actions when modal is closed.
+ */
+function modalClose(){
+    modal.setAttribute('aria-hidden','true');
+    modalToggle.innerText = 'Leave a Review';
+    modalToggle.removeAttribute('aria-label');
+}
+
 
 
