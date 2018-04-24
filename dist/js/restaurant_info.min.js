@@ -93,8 +93,11 @@ fetchReviewsFromNetwork = (id) => {
  * Create restaurant HTML and add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
-    const name = document.getElementById('restaurant-name');
-    name.innerHTML = restaurant.name;
+    const names = document.querySelectorAll('.restaurant-name');
+    names.forEach((name) => {
+        name.innerHTML = restaurant.name;
+    });
+
 
     const address = document.getElementById('restaurant-address');
     address.innerHTML = restaurant.address;
@@ -151,9 +154,7 @@ fillReviewsHTML = (reviews) => {
         container.appendChild(noReviews);
         return;
     }
-    const ul = document.createElement('ul');
-    ul.id = 'reviews-list';
-
+    const ul = container.querySelector('#reviews-list');
     reviews.forEach(review => {
         ul.appendChild(createReviewHTML(review));
     });
@@ -223,6 +224,7 @@ getParameterByName = (name, url) => {
 const modal = document.getElementById('user-review');
 const modalToggle = modal.querySelector('#review-modal-trigger');
 const reviewForm = modal.querySelector('#user-review-form');
+const submitBtn = reviewForm.querySelector('#form-submit');
 
 // lock focus to modal
 modalToggle.addEventListener('keydown', (e) => {
@@ -233,7 +235,7 @@ modalToggle.addEventListener('keydown', (e) => {
 
 });
 // Close modal with escape key
-document.addEventListener('keydown',(e)=>{
+document.addEventListener('keydown', (e) => {
     if (e.keyCode === 27 && reviewForm.classList.contains('visible')) {
         reviewForm.classList.remove('visible');
         modalClose();
@@ -242,11 +244,10 @@ document.addEventListener('keydown',(e)=>{
 // Control modal visibility
 modalToggle.addEventListener('click', () => {
     reviewForm.scrollIntoView();
-    reviewForm.classList.toggle('visible');
-    if(reviewForm.classList.contains('visible')){
-        modalOpen();
-    } else{
+    if (reviewForm.classList.contains('visible')) {
         modalClose();
+    } else {
+        modalOpen();
     }
     setTimeout(() => {
         reviewForm.name.focus();
@@ -256,20 +257,94 @@ modalToggle.addEventListener('click', () => {
 /**
  * Actions when modal is opened.
  */
-function modalOpen(){
-    modal.setAttribute('aria-hidden','false');
+function modalOpen() {
+    reviewForm.classList.add('visible');
+    modal.setAttribute('aria-hidden', 'false');
     modalToggle.innerText = 'Close';
-    modalToggle.setAttribute('aria-label','close');
+    modalToggle.setAttribute('aria-label', 'close');
 }
 
 /**
  * Actions when modal is closed.
  */
-function modalClose(){
-    modal.setAttribute('aria-hidden','true');
+function modalClose() {
+    reviewForm.classList.remove('visible');
+    modal.setAttribute('aria-hidden', 'true');
     modalToggle.innerText = 'Leave a Review';
     modalToggle.removeAttribute('aria-label');
+    reviewForm.style.display = 'block';
+    reviewForm.reset();
+    submitBtn.innerText = 'Submit Review';
+    submitBtn.removeAttribute('disabled');
+    const confirmation = modal.querySelector('.confirmation');
+    if (confirmation) {
+        confirmation.remove();
+    }
+
 }
+
+/**
+ * Actions when modal actions throw an error.
+ */
+function modalError(err, confirmation) {
+    reviewForm.style.display = 'none';
+    console.log('Modal error - ', err);
+    confirmation.innerHTML = `<p>Sorry there was an error. Please again try later.</p>`;
+    modal.appendChild(confirmation);
+    modalToggle.focus();
+    setTimeout(() => {
+        modalClose();
+    }, 4000)
+}
+
+reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitBtn.innerText = 'Please Wait';
+    submitBtn.setAttribute('disabled','disabled');
+    const data = {
+        restaurant_id: parseInt(getParameterByName('id')),
+        name: reviewForm.name.value,
+        rating: reviewForm.rating.value,
+        comments: reviewForm.comments.value
+    };
+    const confirmation = document.createElement('div');
+    confirmation.classList.add('confirmation');
+    confirmation.innerHTML = `<p>Thanks for your review.</p>`;
+    fetch('http://localhost:1337/reviews/', {
+        method: 'POST',
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        body: JSON.stringify(data)
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            if (data.id) {
+                // iDBAddData expects an array
+                iDBAddData([data], 'reviews-store')
+                    .then(() => {
+                        modal.appendChild(confirmation);
+                        modal.parentElement.lastElementChild.appendChild(createReviewHTML(data));
+                        modalToggle.focus();
+                        reviewForm.style.display = 'none';
+                        setTimeout(() => {
+                            modalClose();
+                        }, 4000)
+                    })
+                    .catch((err) => {
+                        modalError(err, confirmation);
+                    });
+            } else {
+                modalError('No data returned', confirmation);
+            }
+        }).catch((err) => {
+        modalError(err, confirmation);
+    });
+});
+
+
+
 
 
 

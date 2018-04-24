@@ -41,7 +41,7 @@
         <!-- Beginning restaurant -->
         <section id="restaurant-container">
             <div class="restaurant-info">
-                <h2 id="restaurant-name" tabindex="0"></h2>
+                <h2 class="restaurant-name" tabindex="0"></h2>
                 <h3 id="restaurant-cuisine" tabindex="0"></h3>
                 <address id="restaurant-address" tabindex="0"></address>
                 <table id="restaurant-hours" tabindex="0">
@@ -56,6 +56,7 @@
         <section id="reviews-container">
             <div id="user-review" role="dialog" aria-hidden="true">
                 <form action="" id="user-review-form">
+                    <h2 class="restaurant-name"></h2>
                     <div class="form-field">
                         <label for="name">Your Name</label>
                         <input type="text" name="name" id="name" required>
@@ -77,11 +78,12 @@
                         <label for="comments">Comments</label>
                         <textarea name="comments" id="comments" rows="8" required></textarea>
                     </div>
-                    <button class="btn" type="submit">Submit Review</button>
+                    <button class="btn" id="form-submit" type="submit">Submit Review</button>
                 </form>
                 <button class="btn" id="review-modal-trigger">Leave a Review</button>
             </div>
             <ul id="reviews-list"></ul>
+
         </section>
         <!-- End reviews -->
     </div>
