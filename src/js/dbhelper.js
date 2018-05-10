@@ -26,12 +26,19 @@ class DBHelper {
                     if (data.length > 0) {
                         return callback(null, data)
                     }
-                });
+                })
+                // Also try to fetch from network
+                .then(()=>{
+                    fetch(DBHelper.RESTAURANTS_URL)
+                        .then((response) => response.json())
+                        .then((data) => callback(null, data))
+                })
+        }else{
+            fetch(DBHelper.RESTAURANTS_URL)
+                .then((response) => response.json())
+                .then((data) => callback(null, data))
         }
-        // Also try to fetch from network
-        fetch(DBHelper.RESTAURANTS_URL)
-            .then((response) => response.json())
-            .then((data) => callback(null, data))
+
     }
 
 

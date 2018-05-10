@@ -88,11 +88,27 @@ fetchReviewsFromNetwork = (id) => {
         .catch((err) => console.log(err));
 };
 
+/** add eventListener for favorite star **/
+const favoriteStar = document.getElementById('restaurant-container');
+favoriteStar.addEventListener('click', favouriteRestaurant);
+favoriteStar.addEventListener('keydown', favouriteRestaurant);
+
 
 /**
  * Create restaurant HTML and add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
+    const restaurantInfo = document.querySelector('.restaurant-info');
+    restaurantInfo.dataset.id = restaurant.id;
+
+    const like = document.querySelector('.favorite');
+    if (restaurant.is_favorite === 'true'){
+        like.classList.add('favorited');
+        like.title = `Remove from favourites`;
+    }else{
+        like.title = `Add to Favourites`;
+    }
+
     const names = document.querySelectorAll('.restaurant-name');
     names.forEach((name) => {
         name.innerHTML = restaurant.name;
@@ -220,6 +236,8 @@ getParameterByName = (name, url) => {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 };
 
+
+
 /** Review Modal **/
 const modal = document.getElementById('user-review');
 const modalToggle = modal.querySelector('#review-modal-trigger');
@@ -300,7 +318,7 @@ function modalError(err, confirmation) {
 reviewForm.addEventListener('submit', (e) => {
     e.preventDefault();
     submitBtn.innerText = 'Please Wait';
-    submitBtn.setAttribute('disabled','disabled');
+    submitBtn.setAttribute('disabled', 'disabled');
     const data = {
         restaurant_id: parseInt(getParameterByName('id')),
         name: reviewForm.name.value,
@@ -310,19 +328,17 @@ reviewForm.addEventListener('submit', (e) => {
     const confirmation = document.createElement('div');
     confirmation.classList.add('confirmation');
     confirmation.innerHTML = `<p>Thanks for your review.</p>`;
-    fetch('http://localhost:1337/reviews/', {
-        method: 'POST',
-        headers: new Headers({
-            'Content-Type': 'application/json'
-        }),
-        body: JSON.stringify(data)
-    })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            if (data.id) {
+
+    if ('serviceWorker' in navigator && 'SyncManager' in window) {
+
+        navigator.serviceWorker.ready
+            .then((sw) => {
+                data.createdAt = Date.now();
                 // iDBAddData expects an array
-                iDBAddData([data], 'reviews-store')
+                iDBAddData([data], 'reviews-sync-store')
+                    .then(() => {
+                        return sw.sync.register('sync-new-review');
+                    })
                     .then(() => {
                         modal.appendChild(confirmation);
                         modal.parentElement.lastElementChild.appendChild(createReviewHTML(data));
@@ -332,17 +348,46 @@ reviewForm.addEventListener('submit', (e) => {
                             modalClose();
                         }, 4000)
                     })
+
                     .catch((err) => {
                         modalError(err, confirmation);
                     });
-            } else {
-                modalError('No data returned', confirmation);
-            }
-        }).catch((err) => {
-        modalError(err, confirmation);
-    });
-});
+            });
+    } else {
+        fetch('http://localhost:1337/reviews/', {
+            method: 'POST',
+            headers: new Headers({
+                'Content-Type': 'application/json'
+            }),
+            body: JSON.stringify(data)
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                if (data.id) {
+                    // iDBAddData expects an array
+                    iDBAddData([data], 'reviews-store')
+                        .then(() => {
+                            modal.appendChild(confirmation);
+                            modal.parentElement.lastElementChild.appendChild(createReviewHTML(data));
+                            modalToggle.focus();
+                            reviewForm.style.display = 'none';
+                            setTimeout(() => {
+                                modalClose();
+                            }, 4000)
+                        })
+                        .catch((err) => {
+                            modalError(err, confirmation);
+                        });
+                } else {
+                    modalError('No data returned', confirmation);
+                }
+            }).catch((err) => {
+            modalError(err, confirmation);
+        });
+    }
 
+});
 
 
 

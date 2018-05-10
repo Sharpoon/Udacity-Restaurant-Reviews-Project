@@ -165,6 +165,8 @@ nav h1 a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+
   address{
     min-height: 50px;
   }
@@ -211,6 +213,28 @@ nav h1 a {
 
 #restaurants-list li a:hover, #restaurants-list li a:focus {
   background-color: #666;
+}
+
+.favorite {
+  position: absolute;
+  right: 10px;
+  background-color: #333;
+  padding: 2px 5px;
+  &:hover,&:focus{
+    background-color: #0275d8;
+  }
+  svg{
+    pointer-events: none;
+  }
+  &.favorited{
+    .star{
+      fill:#f77a59;
+    }
+  }
+
+  .star{
+    fill:#fff;
+  }
 }
 
 .skip-link {

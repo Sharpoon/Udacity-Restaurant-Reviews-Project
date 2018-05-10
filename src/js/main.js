@@ -10,7 +10,7 @@ var markers = [];
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('/sw.js')
-        .then(() => console.log('Service worker registered!') );
+        .then(() => console.log('Service worker registered!'));
 }
 
 
@@ -22,10 +22,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fetchCuisines();
     updateRestaurants();
     // allow time for restaurants to load before lazyload setup
-    setTimeout(lazyLoadMap,2000);
+    setTimeout(lazyLoadMap, 2000);
 
 });
+/** add eventListener for favorite star **/
 
+const restaurantList = document.getElementById('restaurants-list');
+restaurantList.addEventListener('click', favouriteRestaurant);
+restaurantList.addEventListener('keydown', favouriteRestaurant);
 
 
 /**
@@ -47,6 +51,8 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const select = document.getElementById('neighborhoods-select');
+    select.innerHTML = '';
+    select.innerHTML = '<option value="all">All Neighborhoods</option>';
     neighborhoods.forEach(neighborhood => {
         const option = document.createElement('option');
         option.innerHTML = neighborhood;
@@ -74,7 +80,8 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
     const select = document.getElementById('cuisines-select');
-
+    select.innerHTML = '';
+    select.innerHTML = '<option value="all">All Cuisines</option>';
     cuisines.forEach(cuisine => {
         const option = document.createElement('option');
         option.innerHTML = cuisine;
@@ -147,7 +154,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 
 // Remove all map markers
     const ul = document.getElementById('restaurants-list');
-    if (!restaurants.length){
+    if (!restaurants.length) {
         ul.innerHTML = '<h2>Sorry no restaurants match that filter.</h2>';
         return;
     }
@@ -161,7 +168,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Remove all markers from map.
  */
-resetMap = () =>{
+resetMap = () => {
     self.markers.forEach(m => m.setMap(null));
     self.markers = [];
 };
@@ -171,8 +178,26 @@ resetMap = () =>{
  */
 createRestaurantHTML = (restaurant) => {
     const li = document.createElement('li');
-    li.setAttribute('tabindex','0');
+    li.setAttribute('tabindex', '0');
     li.setAttribute('aria-label', restaurant.name);
+    li.setAttribute('data-id', restaurant.id);
+
+    const like = document.createElement('div');
+
+    like.classList.add('favorite');
+    like.setAttribute('tabindex','0');
+    if (restaurant.is_favorite === 'true'){
+        like.classList.add('favorited');
+        like.title = `Remove from favourites`;
+    }else{
+        like.title = `Add to Favourites`;
+    }
+
+
+    like.innerHTML = `<svg width="30" height="30" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">            
+            <polygon class="star" points="10 0.19 7 6.78 0 7.69 5.15 12.66 3.82 19.81 10 16.3 16.18 19.81 14.85 12.66 20 7.69 13 6.78 10 0.19"/>
+        </svg>`
+    li.appendChild(like);
     const picture = document.createElement('picture');
     picture.innerHTML = DBHelper.pictureElementForRestaurant(restaurant, true);
     li.append(picture);
@@ -198,14 +223,11 @@ createRestaurantHTML = (restaurant) => {
 };
 
 
-
-
-
 /**
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
-    if (window.google){
+    if (window.google) {
         restaurants.forEach(restaurant => {
             // Add marker to the map
             const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);

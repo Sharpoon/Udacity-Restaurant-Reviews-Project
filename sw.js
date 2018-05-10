@@ -59,14 +59,14 @@ self.addEventListener('fetch', (event) => {
             fetch(event.request)
                 .then(function (response) {
                     const clonedResponse = response.clone();
-                    // Clear data store
-                    iDBClearAllData('restaurants-store')
-                        .then(function () {
-                            return clonedResponse.json();
-                        })
-                        .then(function (restaurantsData) {
-                            // Add fresh data to the store
-                            iDBAddData(restaurantsData,'restaurants-store');
+                    clonedResponse.json()
+                        .then((data)=>{
+                            if (data.length){
+                                // if all data returned then clear data store
+                                iDBClearAllData('restaurants-store')
+                            }
+                            iDBAddData(data,'restaurants-store')
+                                .then(()=>console.log('iDB restaurant store updated'))
                         });
 
                     return response;
@@ -111,6 +111,52 @@ self.addEventListener('fetch', (event) => {
                 })
         );
 
+    }
+});
+
+self.addEventListener('sync', (event) => {
+    if (event.tag === 'sync-new-review') {
+        console.log('Service Worker - syncing new reviews');
+        event.waitUntil(
+            iDBFetchData('reviews-sync-store')
+                .then((reviews) => {
+                    for (let review of reviews) {
+                        fetch(REVIEWS_URL, {
+                            method: 'POST',
+                            headers: new Headers({
+                                'Content-Type': 'application/json'
+                            }),
+                            body: JSON.stringify({
+                                restaurant_id: review.restaurant_id,
+                                name: review.name,
+                                rating: review.rating,
+                                comments: review.comments,
+                                createdAt: review.createdAt
+                            })
+                        })
+                            .then((res) => res.json())
+                            .then((data) => {
+                                if (data.id) {
+                                    // iDBAddData expects an array
+                                    iDBAddData([data], 'reviews-store')
+                                        .then(() => {
+                                            console.log('iDB updated');
+                                            iDBDeleteItem('reviews-sync-store',review.createdAt);
+                                        })
+                                        .catch((err) => {
+                                            console.log(err);
+                                        });
+                                } else {
+                                    console.log('No data returned');
+                                }
+                            }).catch((err) => {
+                                console.log(err);
+                        });
+
+                    }
+
+                })
+        );
     }
 });
 
