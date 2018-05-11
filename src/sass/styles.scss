@@ -220,6 +220,10 @@ nav h1 a {
   right: 10px;
   background-color: #333;
   padding: 2px 5px;
+  .restaurant-info &{
+    left: 0;
+    right: auto;
+  }
   &:hover,&:focus{
     background-color: #0275d8;
   }

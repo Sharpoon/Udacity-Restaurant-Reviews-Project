@@ -239,37 +239,39 @@ getParameterByName = (name, url) => {
 
 
 /** Review Modal **/
-const modal = document.getElementById('user-review');
-const modalToggle = modal.querySelector('#review-modal-trigger');
-const reviewForm = modal.querySelector('#user-review-form');
+const reviewContainer = document.querySelector('#reviews-container');
+const modal = reviewContainer.querySelector('.user-review-modal');
+const modalReveal = reviewContainer.querySelector('#review-modal-open');
+const modalHide = reviewContainer.querySelector('.review-modal-close');
+const reviewForm = reviewContainer.querySelector('#user-review-form');
 const submitBtn = reviewForm.querySelector('#form-submit');
 
-// lock focus to modal
-modalToggle.addEventListener('keydown', (e) => {
+// lock focus to modal and listen for close event.
+modalHide.addEventListener('keydown', (e) => {
     if (e.keyCode === 9 && reviewForm.classList.contains('visible')) {
         e.preventDefault();
         reviewForm.name.focus();
+    } else if (e.keyCode === 13 && reviewForm.classList.contains('visible') ) {
+        e.preventDefault();
+        modalClose();
     }
 
 });
 // Close modal with escape key
 document.addEventListener('keydown', (e) => {
     if (e.keyCode === 27 && reviewForm.classList.contains('visible')) {
-        reviewForm.classList.remove('visible');
         modalClose();
     }
 });
-// Control modal visibility
-modalToggle.addEventListener('click', () => {
-    reviewForm.scrollIntoView();
-    if (reviewForm.classList.contains('visible')) {
-        modalClose();
-    } else {
-        modalOpen();
-    }
-    setTimeout(() => {
-        reviewForm.name.focus();
-    }, 500);
+// trigger modal close
+modalHide.addEventListener('click', () => {
+    modalClose();
+});
+
+
+// trigger modal open
+modalReveal.addEventListener('click', () => {
+    modalOpen();
 });
 
 /**
@@ -278,8 +280,10 @@ modalToggle.addEventListener('click', () => {
 function modalOpen() {
     reviewForm.classList.add('visible');
     modal.setAttribute('aria-hidden', 'false');
-    modalToggle.innerText = 'Close';
-    modalToggle.setAttribute('aria-label', 'close');
+    reviewForm.scrollIntoView();
+    setTimeout(() => {
+        reviewForm.name.focus();
+    }, 500);
 }
 
 /**
@@ -288,12 +292,11 @@ function modalOpen() {
 function modalClose() {
     reviewForm.classList.remove('visible');
     modal.setAttribute('aria-hidden', 'true');
-    modalToggle.innerText = 'Leave a Review';
-    modalToggle.removeAttribute('aria-label');
-    reviewForm.style.display = 'block';
+    reviewForm.style = '';
     reviewForm.reset();
     submitBtn.innerText = 'Submit Review';
     submitBtn.removeAttribute('disabled');
+    modalReveal.focus();
     const confirmation = modal.querySelector('.confirmation');
     if (confirmation) {
         confirmation.remove();
@@ -305,11 +308,10 @@ function modalClose() {
  * Actions when modal actions throw an error.
  */
 function modalError(err, confirmation) {
-    reviewForm.style.display = 'none';
+    reviewForm.style.visibility = 'hidden';
     console.log('Modal error - ', err);
     confirmation.innerHTML = `<p>Sorry there was an error. Please again try later.</p>`;
     modal.appendChild(confirmation);
-    modalToggle.focus();
     setTimeout(() => {
         modalClose();
     }, 4000)
@@ -334,16 +336,17 @@ reviewForm.addEventListener('submit', (e) => {
         navigator.serviceWorker.ready
             .then((sw) => {
                 data.createdAt = Date.now();
-                // iDBAddData expects an array
-                iDBAddData([data], 'reviews-sync-store')
+
+                iDBAddData(data, 'reviews-sync-store')
                     .then(() => {
                         return sw.sync.register('sync-new-review');
                     })
                     .then(() => {
                         modal.appendChild(confirmation);
-                        modal.parentElement.lastElementChild.appendChild(createReviewHTML(data));
-                        modalToggle.focus();
-                        reviewForm.style.display = 'none';
+                        reviewForm.style.visibility = 'hidden';
+                        // reviewForm.setAttribute('aria-hidden', 'true');
+                        modal.parentElement.parentElement.lastElementChild.appendChild(createReviewHTML(data));
+
                         setTimeout(() => {
                             modalClose();
                         }, 4000)
@@ -363,15 +366,15 @@ reviewForm.addEventListener('submit', (e) => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+
                 if (data.id) {
-                    // iDBAddData expects an array
-                    iDBAddData([data], 'reviews-store')
+                    iDBAddData(data, 'reviews-store')
                         .then(() => {
                             modal.appendChild(confirmation);
-                            modal.parentElement.lastElementChild.appendChild(createReviewHTML(data));
-                            modalToggle.focus();
-                            reviewForm.style.display = 'none';
+                            reviewForm.style.visibility = 'hidden';
+                            // reviewForm.setAttribute('aria-hidden', 'true');
+                            modal.parentElement.parentElement.lastElementChild.appendChild(createReviewHTML(data));
+                            modalHide.focus();
                             setTimeout(() => {
                                 modalClose();
                             }, 4000)

@@ -29,7 +29,7 @@
     <!-- End nav -->
 </header>
 <!-- End header -->
-<a class="skip-link sr-only" href="#restaurant-container">Skip Google map of restaurant location</a>
+<!--<a class="skip-link sr-only" href="#restaurant-container">Skip Google map of restaurant location</a>-->
 <!-- Beginning main -->
 <main id="maincontent" role="main">
     <div class="container">
@@ -56,33 +56,39 @@
         <!-- end restaurant -->
         <!-- Beginning reviews -->
         <section id="reviews-container">
-            <div id="user-review" role="dialog" aria-hidden="true">
-                <form action="" id="user-review-form">
-                    <h2 class="restaurant-name"></h2>
-                    <div class="form-field">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    <div class="form-field">
-                        <p id="rating-label">Rating</p>
-                        <label class="radio" for="rating1">1</label>
-                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating1" value="1" required>
-                        <label class="radio" for="rating2">2</label>
-                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating2" value="2" required>
-                        <label class="radio" for="rating3">3</label>
-                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating3" value="3" required>
-                        <label class="radio" for="rating4">4</label>
-                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating4" value="4" required>
-                        <label class="radio" for="rating5">5</label>
-                        <input type="radio" aria-describedby="rating-label" name="rating" id="rating5" value="5" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="comments">Comments</label>
-                        <textarea name="comments" id="comments" rows="8" required></textarea>
-                    </div>
-                    <button class="btn" id="form-submit" type="submit">Submit Review</button>
-                </form>
-                <button class="btn" id="review-modal-trigger">Leave a Review</button>
+            <button class="btn" id="review-modal-open">Leave a review</button>
+            <div id="user-review">
+                <div class="user-review-modal" role="dialog" aria-hidden="true">
+                    <form id="user-review-form">
+                        <h2 class="restaurant-name"></h2>
+                        <div class="form-field">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="form-field">
+                            <fieldset>
+                                <legend>Rating</legend>
+                                <label class="radio" for="rating1">1</label>
+                                <input type="radio" name="rating" id="rating1" value="1" required>
+                                <label class="radio" for="rating2">2</label>
+                                <input type="radio" name="rating" id="rating2" value="2" required>
+                                <label class="radio" for="rating3">3</label>
+                                <input type="radio" name="rating" id="rating3" value="3" required>
+                                <label class="radio" for="rating4">4</label>
+                                <input type="radio" name="rating" id="rating4" value="4" required>
+                                <label class="radio" for="rating5">5</label>
+                                <input type="radio" name="rating" id="rating5" value="5" required>
+                            </fieldset>
+                        </div>
+                        <div class="form-field">
+                            <label for="comments">Comments</label>
+                            <textarea name="comments" id="comments" rows="8" required></textarea>
+                        </div>
+                        <button class="btn" id="form-submit" type="submit">Submit Review</button>
+                        <div class="btn review-modal-close" tabindex="0" aria-label="close">Close</div>
+                    </form>
+                </div>
+
             </div>
             <ul id="reviews-list"></ul>
 
