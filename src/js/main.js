@@ -192,8 +192,6 @@ createRestaurantHTML = (restaurant) => {
     }else{
         like.title = `Add to Favourites`;
     }
-
-
     like.innerHTML = `<svg width="30" height="30" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">            
             <polygon class="star" points="10 0.19 7 6.78 0 7.69 5.15 12.66 3.82 19.81 10 16.3 16.18 19.81 14.85 12.66 20 7.69 13 6.78 10 0.19"/>
         </svg>`
