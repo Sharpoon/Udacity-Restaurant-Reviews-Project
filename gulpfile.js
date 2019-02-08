@@ -8,34 +8,27 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const responsive = require('gulp-responsive');
 
-gulp.task('default', ['styles', 'scripts', 'scripts-common']);
-
-gulp.task('watch', ['styles', 'scripts', 'scripts-common'], function () {
-    gulp.watch('src/sass/*.scss', ['styles']);
-    gulp.watch('src/js/*.js', ['scripts']);
-    gulp.watch('src/js/common/*.js', ['scripts-common']);
 
 
-});
-
-
-gulp.task('scripts', function () {
+function scripts(done) {
     gulp.src('src/js/*.js')
-        // .pipe(uglify())
+    // .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/js'));
-});
+    done();
+}
 
 
-gulp.task('scripts-common', function () {
+function scriptsCommon(done) {
     gulp.src('src/js/common/*.js')
         .pipe(concat('common.min.js'))
         // .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
-});
+    done();
+}
 
 
-gulp.task('styles', function () {
+function styles(done) {
     gulp.src('src/sass/*.scss')
         .pipe(sass({
             outputStyle: 'compressed'
@@ -44,11 +37,12 @@ gulp.task('styles', function () {
             browsers: ['last 2 versions']
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/css'));
+    done();
 
-});
+}
 
-gulp.task('responsive-image-icons', function () {
+function responsiveImageIcons() {
     return gulp.src('src/img/icons/*.{png,jpg}')
         .pipe(responsive({
             // produce multiple images from one source
@@ -84,8 +78,10 @@ gulp.task('responsive-image-icons', function () {
             ]
         }))
         .pipe(gulp.dest('dist/img/icons'));
-});
-gulp.task('responsive-images', function () {
+
+}
+
+function responsiveImages() {
     return gulp.src('src/img/*.{png,jpg}')
         .pipe(responsive({
             // produce multiple images from one source
@@ -120,13 +116,26 @@ gulp.task('responsive-images', function () {
                 },
                 {
                     width: 800,
-                    rename: { extname: '.webp'},
+                    rename: {extname: '.webp'},
                     quality: 20
                 }
             ]
         }, {quality: 50}))
         .pipe(gulp.dest('dist/img'));
-});
+}
+
+gulp.task('styles', styles);
+gulp.task('scripts', scripts);
+gulp.task('scripts-common', scriptsCommon);
+gulp.task('responsive-image-icons', responsiveImageIcons);
+gulp.task('responsive-images', responsiveImages);
+gulp.task('default', gulp.parallel(styles, scripts, scriptsCommon, responsiveImages, responsiveImageIcons));
+gulp.task('watch', watch);
+
+function watch() {
+    gulp.watch('src/sass/*.scss', styles);
+    gulp.watch('src/js/*.js', scripts);
+    gulp.watch('src/js/common/*.js', scriptsCommon);
 
 
-
+}
